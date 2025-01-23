@@ -1,0 +1,5 @@
+__pycache__/
+/.cache
+/data
+data_pipeline.log
+.env
