@@ -1,1 +1,1 @@
-SELECT * FROM {{ source('raw', 'contributors') }}
+SELECT * FROM {{ source('raw','contributors') }}

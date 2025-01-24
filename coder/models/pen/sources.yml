@@ -1,7 +1,6 @@
 sources:
   - name: raw
-    schema: raw
-    tables:
+    tables: 
       - name: contributors
-      - name: raw_branches
+      - name: branches
       - name: forks

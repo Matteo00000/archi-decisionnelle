@@ -1,1 +1,1 @@
-SELECT * FROM {{ source('raw', 'forks') }}
+SELECT * FROM {{ source('raw','forks') }}

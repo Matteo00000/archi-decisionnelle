@@ -16,12 +16,13 @@ def load_data_to_duckdb():
     # Load each parquet file into DuckDB
     data_dir = Path(DATA_DIR)
     for parquet_file in data_dir.glob("*.parquet"):
-        table_name = f"raw_{parquet_file.stem}"
+        table_name = f"raw.{parquet_file.stem}"
         print(f"Loading {parquet_file} into table {table_name}")
         
         try:
             conn = duckdb.connect(DB_NAME)
             query = f"""
+                CREATE SCHEMA IF NOT EXISTS raw;
                 CREATE OR REPLACE TABLE {table_name} 
                 AS SELECT * FROM read_parquet('{parquet_file.as_posix()}')
             """
@@ -29,10 +30,11 @@ def load_data_to_duckdb():
             
             # Verify table creation
             tables = conn.execute("SHOW TABLES").fetchall()
-            if any(t[0] == table_name for t in tables):
-                print(f"Successfully loaded {table_name}")
-            else:
-                print(f"Failed to load {table_name}")
+            print(tables)
+            # if any(t[0] == table_name for t in tables):
+            #     print(f"Successfully loaded {table_name}")
+            # else:
+            #     print(f"Failed to load {table_name}")
                 
         except Exception as e:
             print(f"Error loading {table_name}: {str(e)}")
