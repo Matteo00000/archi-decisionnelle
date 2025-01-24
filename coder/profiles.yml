@@ -1,0 +1,6 @@
+coder:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ..coder_data.db
