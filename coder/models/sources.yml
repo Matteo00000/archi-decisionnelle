@@ -2,4 +2,4 @@ sources:
   - name: raw
     schema: raw
     tables:
-      - name: st_park_p
+      - name: contributors
