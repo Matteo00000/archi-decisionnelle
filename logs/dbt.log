@@ -1,0 +1,66 @@
+[0m13:07:58.854196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B2589F6360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B2589F6A20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B258C6DB80>]}
+
+
+============================== 13:07:58.951477 | 2f067dc5-7b12-48eb-9440-bfb64307fec6 ==============================
+[0m13:07:58.951477 [info ] [MainThread]: Running with dbt=1.9.1
+[0m13:07:58.953429 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\jupit\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:07:59.055038 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/jupit/.dbt')}
+[0m13:07:59.059020 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m13:08:23.295351 [debug] [MainThread]: Starter project path: C:\Users\jupit\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\include\starter_project
+[0m13:08:23.355580 [info ] [MainThread]: 
+Your new dbt project "coder" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:08:23.357728 [info ] [MainThread]: Setting up your profile.
+[0m13:10:01.459735 [info ] [MainThread]: Profile coder written to C:\Users\jupit\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m13:10:01.463803 [debug] [MainThread]: Command `dbt init` succeeded at 13:10:01.462752 after 123.12 seconds
+[0m13:10:01.465747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B25933A7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B259297470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B259296DE0>]}
+[0m13:10:01.467755 [debug] [MainThread]: Flushing usage events
+[0m13:10:02.331544 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:29:34.920974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C37FB48230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C37FA56D80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C37FA56000>]}
+
+
+============================== 13:29:34.937966 | 6f850a86-2260-4e85-a7d4-6cae6e2d0e12 ==============================
+[0m13:29:34.937966 [info ] [MainThread]: Running with dbt=1.9.1
+[0m13:29:34.942968 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\jupit\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt init https://github.com/Matteo00000/archi-decisionnelle.git', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:30:27.912622 [error] [MainThread]: Encountered an error:
+
+[0m13:30:28.022869 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\jupit\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jupit\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jupit\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\jupit\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jupit\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jupit\AppData\Local\Programs\Python\Python312\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jupit\AppData\Local\Programs\Python\Python312\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m13:30:28.030859 [debug] [MainThread]: Command `dbt init` failed at 13:30:28.029854 after 53.40 seconds
+[0m13:30:28.035243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C37FB48230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C37FE24F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C37FE482F0>]}
+[0m13:30:28.039283 [debug] [MainThread]: Flushing usage events
+[0m13:30:29.021320 [debug] [MainThread]: An error was encountered while trying to flush usage events
