@@ -3,4 +3,4 @@ coder:
   outputs:
     dev:
       type: duckdb
-      path: ..coder_data.db
+      path: ../coder_data.db

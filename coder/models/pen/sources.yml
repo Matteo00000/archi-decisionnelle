@@ -3,5 +3,5 @@ sources:
     schema: raw
     tables:
       - name: contributors
-      - name: branches
+      - name: raw_branches
       - name: forks
