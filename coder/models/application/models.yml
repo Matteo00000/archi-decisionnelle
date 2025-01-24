@@ -1,0 +1,17 @@
+models:
+  - name: contributors
+    description: "id of contributors"
+    columns:
+      - name: id
+        description: "id of contributors"
+        data_tests:
+          - not_null
+          - unique
+  - name: fork
+    description: "fork"
+    columns:
+      - name: full_name
+        description: "full name of fork"
+        data_tests:
+          - not_null
+          - unique
