@@ -72,4 +72,7 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+    pen:
+      +materialized: view
+      +schema: pen
 >>>>>>> 9c36c0d46d6d8d01e1e3d3bf3e83aa6b25d1f55c
